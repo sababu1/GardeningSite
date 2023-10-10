@@ -1,0 +1,201 @@
+.navbar {
+  background-color: #333; /* Change the background color */
+  color: #fff; /* Change the text color */
+}
+
+.navbar .nav-link {
+  color: #fff; /* Change the link text color */
+}
+
+.navbar .navbar-brand {
+  font-size: 24px; /* Change the brand font size */
+}
+body {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center; /* Place content in the top-right corner */
+align-items: center; /* Place content in the top-right corner */
+min-height: 100vh; 
+}
+#root {
+  
+  padding: 2rem;
+  width:100%;
+  height: 100vh;
+}
+.home-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+html,body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2lKIJcORM4wH_Y-WRHVRVGY8RtwpKKdkpw&usqp=CAU');
+
+ background-color: green;
+}
+.header {
+  background-color: bisque;
+  border-radius: 30px;
+  border-width: 20px;
+}
+.cont {
+background-color: aquamarine;
+width: 50px;
+height: 50px;
+color: blue;
+}
+
+/* Home.css */
+.home-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2lKIJcORM4wH_Y-WRHVRVGY8RtwpKKdkpw&usqp=CAU'); */
+  background-color: green;
+}
+
+.header {
+  background-color: bisque;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.author-info {
+  background-color: aquamarine;
+  width: 50px;
+  height: 50px;
+  color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+/* NewsContext CSS */
+.news-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+}
+
+.news-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.news-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.news-item img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+/* weather css */
+
+/* App.css */
+
+.app-container {
+  background-color: #ffffff; /* Set the background color for .app-container */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right within .app-container */
+  padding: 20px;
+  max-width: 400px; /* Optional: Set a maximum width for .app-container */
+  width: 100%; /* Ensure .app-container spans the available width */
+}
+
+.weather-container {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  align-self: flex-end; /* Align to the right within .app-container */
+  max-width: 220px;
+  margin-left: auto; /* Push to the right as far as possible */
+  margin-top: 20px;
+}
+
+
+.weather-title {
+  font-size: 18px;
+  align-self: flex-end;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: fit-content; /* Adjust to fit the text inside */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.city-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.city-input {
+  padding: 5px;
+  font-size: 14px;
+  width: 100px; /* Adjust the width as needed */
+  margin-bottom: 5px;
+}
+
+.get-weather-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.weather-details {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: right;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.weather-city {
+  font-weight: bold;
+}
+
+.weather-temp {
+  margin: 5px 0;
+}
+
+.weather-icon {
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+}
+
+
