@@ -1,9 +1,20 @@
 import React from 'react'
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Vegetables from './Vegetables';
+
 const Fruits = () => {
+  const [showVegetables, setShowVegetables] = useState(false);
+
+  const toggleVegetables = () => {
+    setShowVegetables(!showVegetables);
+  };
   return (
+    
     <div>
+      <button onClick={toggleVegetables}>Show Vegetables</button>
+      {showVegetables && <Vegetables />}
 <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="./Flower/Apple.jpeg" />
       <Card.Body>

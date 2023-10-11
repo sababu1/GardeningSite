@@ -1,7 +1,19 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Fruits from './Fruits';
+import Vegetables from './Vegetables';
 const Flowers = () => {
+    const [showFruits, setShowFruits] = useState(false);
+ 
+
+  const toggleFruits = () => {
+    setShowFruits(!showFruits);
+    ;
+  };
+
+  
+
   return (
     <div>
     
@@ -53,7 +65,11 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-   
+    <button onClick={toggleFruits}>Show Fruits</button>
+      
+
+      {showFruits && <Fruits />}
+      
     
     
     
