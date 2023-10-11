@@ -15,7 +15,7 @@ const Flowers = () => {
         <Card.Text>
             ID: 653
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
@@ -28,7 +28,7 @@ const Flowers = () => {
         <Card.Text>
           ID: 100
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
@@ -39,75 +39,21 @@ const Flowers = () => {
         The Glossy Abelia is an amazing ornamental shrub, ideal for adding beauty and structure to your garden. With glossy, deep-green oval leaves, it is fast-growing and has showy, fragrant flowers in shades of pink from late spring to mid-summer. Its tough, durable and drought tolerant evergreen foliage provides a colourful backdrop for beds and borders all year round. 
         </Card.Text>
         <Card.Text> ID: 400</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="./Flower/Monk.jpeg" />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Climbing Monk's Hood</Card.Title>
         <Card.Text>
-          text
+        Climbing Monk's Hood ,Aconitum hemsleyanum, is an amazing climber with beautiful deep violet-blue flowers. This hardy perennial thrives in partially shady areas and can quickly cover walls and fences with its vigorous tendrils of foliage, forming an impressive display. Its foliage is also a great source of contrast against brighter colors, providing a touch of subtle drama. 
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Text>Id:509</Card.Text>
+        <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          text
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          text
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          text
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          text
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          text
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-    
-    
-    
-    
-    
-    
+   
     
     
     

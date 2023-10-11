@@ -10,6 +10,9 @@ import NewsContext from './NewsContext';
 import NewsArticles from './NewsArticles';
 import Plant from './component/Plant';
 import Flowers from './component/Flowers';
+import Vegetables from './component/Vegetables';
+import Fruits from './component/Fruits';
+import FavortiesTab from './component/FavortiesTab';
 export const WeatherContext = createContext();
 
 function App() {
@@ -91,6 +94,9 @@ function App() {
           <Route path="/NewsContext" element={<NewsContext />} />
           <Route path="/Plant" element={<Plant />} />
           <Route path="/Flowers" element={<Flowers />} />
+          <Route path="/Fruits" element={<Fruits />} />
+          <Route path="/Vegetables" element={<Vegetables />} />
+          <Route path="/FavoritesTab" element={<FavortiesTab />} />
         </Routes>
       </WeatherContext.Provider>
     </>

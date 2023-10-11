@@ -17,6 +17,9 @@ const Navbar1 = () => {
           <Nav.Link as={Link} to="/NewsContext">NewsContext</Nav.Link>
           <Nav.Link as={Link} to="/Plant">Plant ID</Nav.Link>
           <Nav.Link as={Link} to="/Flowers">Flowers</Nav.Link>
+          <Nav.Link as={Link} to="/Fruits">Fruits</Nav.Link>
+          <Nav.Link as={Link} to="/Vegetables">Vegetables</Nav.Link>
+          <Nav.Link as={Link} to="/FavoritesTab">FavoritesTab</Nav.Link>
           
           <Nav.Link as={Link} to="/Weather">Weather</Nav.Link>
         </Nav>
