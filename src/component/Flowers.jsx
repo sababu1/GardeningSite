@@ -3,7 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Fruits from './Fruits';
 import Vegetables from './Vegetables';
+import { FlowerContext } from './src/FlowerContext.jsx';
 const Flowers = () => {
+    const { addFlower } = FlowerContext();
+
+    const handleSaveToFavorite = (flower) => {
+        addFlower(flower);
+    }
     const [showFruits, setShowFruits] = useState(false);
  
 
@@ -11,26 +17,36 @@ const Flowers = () => {
     setShowFruits(!showFruits);
     ;
   };
-
+  const flower = {
+    img: './Flower/Hollyhock.jpeg',
+    Name: 'HollyHock',
+    text:
+      "Hollyhock, Alcea rosea 'Nigra', is truly an amazing plant species. It boasts stunning deep purple, velvety flowers with intricate yellow stamens that add visual interest to any garden.",
+    id: 653,
+  };
   
 
   return (
     <div>
-    
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="./Flower/Hollyhock.jpeg" />
+    <div className='CardFull'>
+    <Card style={{ width: '18rem' }}  >
+      <Card.Img value = {img} variant="top" src="./Flower/Hollyhock.jpeg" />
       <Card.Body>
-        <Card.Title>HollyHock</Card.Title>
-        <Card.Text>
+        <Card.Title  value = {Name}>HollyHock
+            
+             </Card.Title>
+        <Card.Text value = {text}>
         Hollyhock ,Alcea rosea 'Nigra', is truly an amazing plant species. It boasts stunning deep purple, velvety flowers with intricate yellow stamens that add visual interest to any garden.
         </Card.Text>
-        <Card.Text>
+        <Card.Text value = {id}>
             ID: 653
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        <Button variant="primary" onClick={() => handleSaveToFavorite(flower)}>
+          Save to Favorites
+        </Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Pixie Maple.jpeg" />
       <Card.Body>
         <Card.Title>Pixie Japanese Maple</Card.Title>
@@ -43,7 +59,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Glossy.jpeg" />
       <Card.Body>
         <Card.Title>Glossy Abelia</Card.Title>
@@ -54,7 +70,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Monk.jpeg" />
       <Card.Body>
         <Card.Title>Climbing Monk's Hood</Card.Title>
@@ -65,6 +81,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
+    </div>
     <button onClick={toggleFruits}>Show Fruits</button>
       
 

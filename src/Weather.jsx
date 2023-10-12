@@ -64,7 +64,7 @@ const Weather = () => {
           <p className="weather-condition">Condition: {icon}</p>
           <img
             src={icon}
-            alt="Weather Icon"
+            alt="Weather-Icon"
             className="weather-icon"
           />
         </div>

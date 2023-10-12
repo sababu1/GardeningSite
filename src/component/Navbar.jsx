@@ -11,7 +11,7 @@ const Navbar1 = () => {
         <Navbar.Brand as={Link} to="/Home">Sababu's News Site</Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-          <Nav.Link as={Link} to="/AboutMe">About Me</Nav.Link>
+          {/* <Nav.Link as={Link} to="/AboutMe">About Me</Nav.Link> */}
           <Nav.Link as={Link} to="/Page1">Page 1</Nav.Link>
           <Nav.Link as={Link} to="/Page2">Page 2</Nav.Link>
           <Nav.Link as={Link} to="/NewsContext">NewsContext</Nav.Link>
