@@ -3,7 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Fruits from './Fruits';
 import Vegetables from './Vegetables';
+
 const Flowers = () => {
+   
     const [showFruits, setShowFruits] = useState(false);
  
 
@@ -16,21 +18,23 @@ const Flowers = () => {
 
   return (
     <div>
-    
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="./Flower/Hollyhock.jpeg" />
+    <div className='CardFull'>
+    <Card style={{ width: '18rem' }}  >
+      <Card.Img  variant="top" src="./Flower/Hollyhock.jpeg" />
       <Card.Body>
-        <Card.Title>HollyHock</Card.Title>
-        <Card.Text>
+        <Card.Title  >HollyHock
+            
+             </Card.Title>
+        <Card.Text >
         Hollyhock ,Alcea rosea 'Nigra', is truly an amazing plant species. It boasts stunning deep purple, velvety flowers with intricate yellow stamens that add visual interest to any garden.
         </Card.Text>
-        <Card.Text>
+        <Card.Text >
             ID: 653
         </Card.Text>
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Pixie Maple.jpeg" />
       <Card.Body>
         <Card.Title>Pixie Japanese Maple</Card.Title>
@@ -43,7 +47,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Glossy.jpeg" />
       <Card.Body>
         <Card.Title>Glossy Abelia</Card.Title>
@@ -54,7 +58,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src="./Flower/Monk.jpeg" />
       <Card.Body>
         <Card.Title>Climbing Monk's Hood</Card.Title>
@@ -65,6 +69,7 @@ const Flowers = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
+    </div>
     <button onClick={toggleFruits}>Show Fruits</button>
       
 

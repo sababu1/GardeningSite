@@ -18,7 +18,8 @@ const Weather = () => {
         let data = await response.json();
         setWeatherData({
           temperature: data.current.temp_f,
-          icon: data.current.condition.icon,
+          icon: data.current.condition.icon
+          
         });
         setDisplayWeather(true);
       } else {
@@ -64,7 +65,7 @@ const Weather = () => {
           <p className="weather-condition">Condition: {icon}</p>
           <img
             src={icon}
-            alt="Weather Icon"
+            alt="Weather-Icon"
             className="weather-icon"
           />
         </div>

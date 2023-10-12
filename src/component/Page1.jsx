@@ -53,7 +53,9 @@ const PlantDetails = () => {
           <h3>Plant Name: {plantData.common_name}</h3>
           <p>Watering Period: {plantData.watering}</p>
           <p>Sunlight: {plantData.sunlight}</p>
-          {/* Add more plant information as needed */}
+          <p>Description: {plantData.description}</p>
+          
+          
         </div>
       )}
     </div>

@@ -2,15 +2,22 @@ import React from 'react'
 
 const Home = () => {
     return (
+      <>
       <div className='home-container'>
         <div className='header'>
-          <h1>Sababu's News Site</h1>
-          <p>Come here for all your necessary aggregated news data</p>
+          <h1>Gardening Site</h1>
+          <p>Come here to learn about exotic plants and common ones that would be a perfect fit for your garden.</p>
         </div>
-        <div className='author-info'>
-          <p>by: Sababu Barashango</p>
-        </div>
+        
       </div>
+
+      <div className='author-info'>
+          <p>Created by: Sababu Barashango</p>
+        </div>
+
+
+
+      </>
     );
   }
   

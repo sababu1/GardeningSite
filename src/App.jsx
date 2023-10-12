@@ -1,19 +1,22 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import './index.css'
 import Home from './component/Home';
 import Navbar1 from './component/Navbar';
-import AboutMe from './component/AboutMe';
+
 import Page1 from './component/Page1.jsx';
-import Page2 from './Page2';
+// import Page2 from './Page2';
 import NewsContext from './NewsContext';
-import NewsArticles from './NewsArticles';
-import Plant from './component/Plant';
+// import NewsArticles from './NewsArticles';
+// import Plant from './component/Plant';
 import Flowers from './component/Flowers';
 import Vegetables from './component/Vegetables';
 import Fruits from './component/Fruits';
 import FavortiesTab from './component/FavortiesTab';
+import Stripe from './component/Stripe';
 export const WeatherContext = createContext();
+
 
 function App() {
   const apiKey = '3f93593a210c4dc788d222647230810';
@@ -31,7 +34,7 @@ function App() {
         let data = await response.json();
         setWeatherData({
           temperature: data.current.temp_f,
-          icon: data.current.condition.icon,
+          icon: data.current.condition.icon
         });
         setDisplayWeather(true);
       } else {
@@ -88,15 +91,18 @@ function App() {
       <WeatherContext.Provider value={{ temperature: weatherData.temperature, icon: weatherData.icon }}>
         <Routes>
           <Route path="/Home" element={<Home />} />
-          <Route path="/AboutMe" element={<AboutMe />} />
+          
           <Route path="/Page1" element={<Page1 />} />
-          <Route path="/Page2" element={<Page2 />} />
+          {/* <Route path="/Page2" element={<Page2 />} /> */}
           <Route path="/NewsContext" element={<NewsContext />} />
-          <Route path="/Plant" element={<Plant />} />
+          {/* <Route path="/Plant" element={<Plant />} /> */}
+         
           <Route path="/Flowers" element={<Flowers />} />
           <Route path="/Fruits" element={<Fruits />} />
           <Route path="/Vegetables" element={<Vegetables />} />
           <Route path="/FavoritesTab" element={<FavortiesTab />} />
+          <Route path="/Stripe" element={<Stripe />} />
+         
         </Routes>
       </WeatherContext.Provider>
     </>

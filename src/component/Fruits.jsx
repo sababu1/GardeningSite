@@ -13,8 +13,8 @@ const Fruits = () => {
   return (
     
     <div>
-      <button onClick={toggleVegetables}>Show Vegetables</button>
-      {showVegetables && <Vegetables />}
+      
+      <div className='CardFull'>
 <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="./Flower/Apple.jpeg" />
       <Card.Body>
@@ -67,11 +67,13 @@ const Fruits = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
+   
+    </div>
 
 
 
-
-
+    <button onClick={toggleVegetables}>Show Vegetables</button>
+      {showVegetables && <Vegetables />}
 
 
 

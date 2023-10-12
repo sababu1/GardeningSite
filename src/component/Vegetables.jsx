@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 const Vegetables = () => {
   return (
     <div>
+      <div className='CardFull'>
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="./Flower/pepper.jpeg" />
       <Card.Body>
@@ -57,7 +58,7 @@ const Vegetables = () => {
         <Button variant="primary">Save to favorties</Button>
       </Card.Body>
     </Card>
-
+    </div>
 
 
 
