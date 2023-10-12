@@ -3,13 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Fruits from './Fruits';
 import Vegetables from './Vegetables';
-import { FlowerContext } from './src/FlowerContext.jsx';
-const Flowers = () => {
-    const { addFlower } = FlowerContext();
 
-    const handleSaveToFavorite = (flower) => {
-        addFlower(flower);
-    }
+const Flowers = () => {
+   
     const [showFruits, setShowFruits] = useState(false);
  
 
@@ -17,33 +13,25 @@ const Flowers = () => {
     setShowFruits(!showFruits);
     ;
   };
-  const flower = {
-    img: './Flower/Hollyhock.jpeg',
-    Name: 'HollyHock',
-    text:
-      "Hollyhock, Alcea rosea 'Nigra', is truly an amazing plant species. It boasts stunning deep purple, velvety flowers with intricate yellow stamens that add visual interest to any garden.",
-    id: 653,
-  };
+
   
 
   return (
     <div>
     <div className='CardFull'>
     <Card style={{ width: '18rem' }}  >
-      <Card.Img value = {img} variant="top" src="./Flower/Hollyhock.jpeg" />
+      <Card.Img  variant="top" src="./Flower/Hollyhock.jpeg" />
       <Card.Body>
-        <Card.Title  value = {Name}>HollyHock
+        <Card.Title  >HollyHock
             
              </Card.Title>
-        <Card.Text value = {text}>
+        <Card.Text >
         Hollyhock ,Alcea rosea 'Nigra', is truly an amazing plant species. It boasts stunning deep purple, velvety flowers with intricate yellow stamens that add visual interest to any garden.
         </Card.Text>
-        <Card.Text value = {id}>
+        <Card.Text >
             ID: 653
         </Card.Text>
-        <Button variant="primary" onClick={() => handleSaveToFavorite(flower)}>
-          Save to Favorites
-        </Button>
+        <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }} >

@@ -67,13 +67,13 @@ const Fruits = () => {
         <Button variant="primary">Save to Favorites</Button>
       </Card.Body>
     </Card>
-    <button onClick={toggleVegetables}>Show Vegetables</button>
-      {showVegetables && <Vegetables />}
+   
     </div>
 
 
 
-
+    <button onClick={toggleVegetables}>Show Vegetables</button>
+      {showVegetables && <Vegetables />}
 
 
 

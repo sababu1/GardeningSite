@@ -18,7 +18,8 @@ const Weather = () => {
         let data = await response.json();
         setWeatherData({
           temperature: data.current.temp_f,
-          icon: data.current.condition.icon,
+          icon: data.current.condition.icon
+          
         });
         setDisplayWeather(true);
       } else {

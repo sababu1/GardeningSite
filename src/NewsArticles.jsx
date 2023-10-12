@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
 
 
-const NewsArticles = () => {
-  const [newsData, setNewsData] = useState([]);
-  const apiKey = 'a2b73b6e477b524427301b33c6cd0761';
+// const NewsArticles = () => {
+//   const [newsData, setNewsData] = useState([]);
+//   const apiKey = 'a2b73b6e477b524427301b33c6cd0761';
 
-  const apiUrl = `http://api.mediastack.com/v1/news?access_key=${apiKey}`;
+//   const apiUrl = `http://api.mediastack.com/v1/news?access_key=${apiKey}`;
 
-  const fetchNewsData = async () => {
-    try {
-      const response = await axios.get(apiUrl);
-      setNewsData(response.data.data);
-    } catch (error) {
-      console.error('Error fetching news data:', error);
-    }
-  };
+//   const fetchNewsData = async () => {
+//     try {
+//       const response = await axios.get(apiUrl);
+//       setNewsData(response.data.data);
+//     } catch (error) {
+//       console.error('Error fetching news data:', error);
+//     }
+//   };
 
-  useEffect(() => {
-    fetchNewsData(); // Fetch news data when the component mounts
-  }, []); // Empty dependency array to run the effect only once when the component mounts
+//   useEffect(() => {
+//     fetchNewsData(); // Fetch news data when the component mounts
+//   }, []); // Empty dependency array to run the effect only once when the component mounts
 
-  return (
-    <div>
-      <h1>MediaStack News</h1>
-      <ul>
-        {newsData.map((newsItem) => (
-          <li key={newsItem.published_at}>
-            <a href={newsItem.url} target="_blank" rel="noopener noreferrer">
-              {newsItem.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h1>MediaStack News</h1>
+//       <ul>
+//         {newsData.map((newsItem) => (
+//           <li key={newsItem.published_at}>
+//             <a href={newsItem.url} target="_blank" rel="noopener noreferrer">
+//               {newsItem.title}
+//             </a>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
 
 
 
