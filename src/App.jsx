@@ -94,6 +94,7 @@ function App() {
       <Navbar1 />
       <WeatherContext.Provider value={{ temperature: weatherData.temperature, icon: weatherData.icon, text: weatherData.text }}>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           
           <Route path="/Page1" element={<Page1 />} />
