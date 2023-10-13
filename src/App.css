@@ -1,21 +1,23 @@
 .navbar {
-  background-color: #333; /* Change the background color */
-  color: #fff; /* Change the text color */
+  background-color: #333; 
+  color: #fff; 
 }
 
 .navbar .nav-link {
-  color: #fff; /* Change the link text color */
+  color: #fff; 
 }
 
 .navbar .navbar-brand {
-  font-size: 24px; /* Change the brand font size */
+  font-size: 24px; 
 }
+
+
 body {
 margin: 0;
 padding: 0;
 display: flex;
-justify-content: center; /* Place content in the top-right corner */
-align-items: center; /* Place content in the top-right corner */
+justify-content: center; 
+align-items: center; 
 min-height: 100vh; 
 }
 #root {
@@ -27,28 +29,43 @@ min-height: 100vh;
 
 .CardFull {
   display: flex;
-  justify-content: space-between; /* Distribute cards horizontally */
+  justify-content: space-between; 
   flex-wrap: wrap;
 }
 .CardFull .card {
-  flex-basis: calc(25% - 1rem); /* Three cards in a row with spacing */
+  flex-basis: calc(25% - 1rem); 
   margin-bottom: 1rem;
 }
-.home-container {
+.Page1Card {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+.FullHome {
+  background-image: url('https://a-z-animals.com/media/2023/03/zoysiza-grass-1024x768.jpg');
+  border-radius: 30px;
+  padding: 20px;
+  height: 800px;
+}
+.homeTitle{
   justify-content: center;
   display: flex;
   align-items: center;
+  text-align: center;
+  background-color: purple;
+  font-family: 'Gill Sans', 'Gill Sans MT',  'Trebuchet MS', sans-serif;
+  font-size: 24px;
+
 }
 html,body {
   background-image: url('https://media.istockphoto.com/id/165764194/vector/gardening-wallpaper-background.jpg?s=612x612&w=0&k=20&c=35X1Nqop6tJTBVWI4L-5NRekskyu2LcOrn_Gk4tnNxE=');
 
  background-color: green;
 }
-.header {
-  background-color: bisque;
-  border-radius: 30px;
-  border-width: 20px;
-}
+
+
 .cont {
 background-color: rgb(8, 8, 8);
 width: 50px;
@@ -57,63 +74,49 @@ color: blue;
 }
 
 /* Home.css */
-.home-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2lKIJcORM4wH_Y-WRHVRVGY8RtwpKKdkpw&usqp=CAU'); */
-  background-color: green;
-}
+
 
 .header {
-  background-color: bisque;
+  /* background-image: url('https://a-z-animals.com/media/2023/03/zoysiza-grass-1024x768.jpg'); */
   border-radius: 30px;
   padding: 20px;
 }
 
-.author-info {
-  background-color: greenyellow;
+.Sababu-info {
+  background-color: purple;
 border-radius: 200px;
 font-size: 30px;
-  color: blue;
+  color: green;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  font-weight: bold;
+  font-style: italic;
+  
 }
 /* NewsContext CSS */
 .news-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: rgb(191, 79, 191);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .news-list {
-  list-style: none;
+  color: black;
   padding: 0;
 }
 
 .news-item {
   margin-bottom: 20px;
   padding: 10px;
-  background-color: #fff;
+  background-color: rgb(87, 202, 87);
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-.news-item h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-
-.news-item p {
-  font-size: 1rem;
-  color: #666;
-}
 
 .news-item img {
   max-width: 100%;
@@ -122,31 +125,48 @@ font-size: 30px;
   border-radius: 5px;
 }
 
-
-/* weather css */
-
-/* App.css */
-
-.app-container {
-  background-color: #ffffff; /* Set the background color for .app-container */
+.nextButton {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Align content to the right within .app-container */
-  padding: 20px;
-  max-width: 400px; /* Optional: Set a maximum width for .app-container */
-  width: 100%; /* Ensure .app-container spans the available width */
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: green;
 }
 
+
+.PlantFacts {
+  text-align: center; 
+  background-color: #FF5733; 
+  color: #FFF; 
+  padding: 10px; 
+}
+.learn {
+  background-color: #333;
+}
+.app-container {
+  background-color: #ffffff; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  padding: 20px;
+  max-width: 400px; 
+  width: 100%; 
+}
+.card {
+  background-color: #FF5733;
+}
 .weather-container {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  align-self: flex-end; /* Align to the right within .app-container */
+  align-self: flex-end;
   max-width: 220px;
-  margin-left: auto; /* Push to the right as far as possible */
+  margin-left: auto;
   margin-top: 20px;
+  max-height: 150px; 
+  overflow-y: auto; 
 }
 
 
@@ -156,7 +176,7 @@ font-size: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
-  width: fit-content; /* Adjust to fit the text inside */
+  width: fit-content;
 }
 
 .input-container {
@@ -178,7 +198,7 @@ font-size: 30px;
 }
 
 .get-weather-button {
-  background-color: #007bff;
+  background-color: green;
   color: white;
   border: none;
   padding: 5px 10px;

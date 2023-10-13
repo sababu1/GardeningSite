@@ -18,11 +18,12 @@ const Flowers = () => {
 
   return (
     <div>
+      <h1 className='PlantFacts'>PLANT FACTS</h1>
     <div className='CardFull'>
     <Card style={{ width: '18rem' }}  >
       <Card.Img  variant="top" src="./Flower/Hollyhock.jpeg" />
       <Card.Body>
-        <Card.Title  >HollyHock
+        <Card.Title>HollyHock
             
              </Card.Title>
         <Card.Text >
@@ -31,7 +32,7 @@ const Flowers = () => {
         <Card.Text >
             ID: 653
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }} >
@@ -44,7 +45,7 @@ const Flowers = () => {
         <Card.Text>
           ID: 100
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }} >
@@ -55,7 +56,7 @@ const Flowers = () => {
         The Glossy Abelia is an amazing ornamental shrub, ideal for adding beauty and structure to your garden. With glossy, deep-green oval leaves, it is fast-growing and has showy, fragrant flowers in shades of pink from late spring to mid-summer. Its tough, durable and drought tolerant evergreen foliage provides a colourful backdrop for beds and borders all year round. 
         </Card.Text>
         <Card.Text> ID: 400</Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }} >
@@ -66,18 +67,22 @@ const Flowers = () => {
         Climbing Monk's Hood ,Aconitum hemsleyanum, is an amazing climber with beautiful deep violet-blue flowers. This hardy perennial thrives in partially shady areas and can quickly cover walls and fences with its vigorous tendrils of foliage, forming an impressive display. Its foliage is also a great source of contrast against brighter colors, providing a touch of subtle drama. 
         </Card.Text>
         <Card.Text>Id:509</Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
     </div>
-    <button onClick={toggleFruits}>Show Fruits</button>
+    <Button onClick={toggleFruits} variant='success'>Toggle Fruits</Button>
       
 
       {showFruits && <Fruits />}
       
     
     
-    
+      <p>
+  <a href="https://perenual.com/plant-species-database-search-finder" target="_blank" rel="noopener noreferrer" className='learn'>
+    Learn more about other plants
+  </a>
+</p>
     
     </div>
   )

@@ -6,37 +6,38 @@ import Home from './component/Home';
 import Navbar1 from './component/Navbar';
 
 import Page1 from './component/Page1.jsx';
-// import Page2 from './Page2';
+
 import NewsContext from './NewsContext';
-// import NewsArticles from './NewsArticles';
-// import Plant from './component/Plant';
+
 import Flowers from './component/Flowers';
 import Vegetables from './component/Vegetables';
 import Fruits from './component/Fruits';
-import FavortiesTab from './component/FavortiesTab';
-import Stripe from './component/Stripe';
+
+
 export const WeatherContext = createContext();
 
 
 function App() {
   const apiKey = '3f93593a210c4dc788d222647230810';
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState('');  //store city inputs
   const [displayWeather, setDisplayWeather] = useState(false);
-  const [weatherData, setWeatherData] = useState({ temperature: '', icon: '' });
-
+  const [weatherData, setWeatherData] = useState({ temperature: '', icon: '' , text: ''}); //store weather data
+//text: cloudy, partly cloudy, sunny, overcast
+//sunlight: full sun, part shade, filtered shade, empty string, full shade 
   const fetchWeatherData = async () => {
     try {
       let response = await fetch(
         `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
       );
 
-      if (response.ok) {
-        let data = await response.json();
+      if (response.ok) { //check if response occurs (error code : 200)
+        let data = await response.json(); //parse json data 
         setWeatherData({
           temperature: data.current.temp_f,
-          icon: data.current.condition.icon
+          icon: data.current.condition.icon,
+          text: data.current.condition.text
         });
-        setDisplayWeather(true);
+        setDisplayWeather(true); //show the div
       } else {
         console.error('Error fetching weather data');
       }
@@ -45,19 +46,21 @@ function App() {
     }
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = () => { //get weather button click
     if (city) {
       fetchWeatherData();
+      
     }
   };
 
   const handleCityChange = (e) => {
-    setCity(e.target.value);
-  };
+    setCity(e.target.value); //update city state
+  }; 
 
   return (
+    
     <>
-      <div className="weather-container">
+        <div className="weather-container">
         <h2 className="weather-title">Weather Information</h2>
         <div className="input-container">
           <label htmlFor="city" className="city-label">
@@ -74,10 +77,11 @@ function App() {
             Get Weather
           </button>
         </div>
-        {displayWeather && (
+        {displayWeather && (  //conditional rendering based on if data is avaliable
           <div className="weather-details">
             <h3 className="weather-city">Weather for {city}</h3>
             <p className="weather-temp">Temperature: {weatherData.temperature}°F</p>
+            <p className="WeText">Condition: {weatherData.text}</p>
             <img
               src={weatherData.icon}
               alt="Weather Icon"
@@ -88,23 +92,24 @@ function App() {
       </div>
       <div></div>
       <Navbar1 />
-      <WeatherContext.Provider value={{ temperature: weatherData.temperature, icon: weatherData.icon }}>
+      <WeatherContext.Provider value={{ temperature: weatherData.temperature, icon: weatherData.icon, text: weatherData.text }}>
         <Routes>
           <Route path="/Home" element={<Home />} />
           
           <Route path="/Page1" element={<Page1 />} />
-          {/* <Route path="/Page2" element={<Page2 />} /> */}
+         
           <Route path="/NewsContext" element={<NewsContext />} />
-          {/* <Route path="/Plant" element={<Plant />} /> */}
+          
          
           <Route path="/Flowers" element={<Flowers />} />
           <Route path="/Fruits" element={<Fruits />} />
           <Route path="/Vegetables" element={<Vegetables />} />
-          <Route path="/FavoritesTab" element={<FavortiesTab />} />
-          <Route path="/Stripe" element={<Stripe />} />
+         
+          
          
         </Routes>
       </WeatherContext.Provider>
+    
     </>
   );
 }
