@@ -46,7 +46,8 @@ const Page1 = ({ weatherData }) => {
         weatherText === 'overcast' ||
         weatherText === 'heavy rain' ||
         weatherText === 'thunderstorms' ||
-        weatherText === 'light rain' 
+        weatherText === 'light rain' ||
+        weatherText === 'light drizzle' 
       ) {
         alert('Stay Inside'); 
       } else {
