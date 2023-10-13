@@ -26,7 +26,7 @@ button:disabled {
 } */
 
 /* spinner/processing state, errors */
-.spinner,
+/* .spinner,
 .spinner:before,
 .spinner:after {
   border-radius: 50%;
@@ -94,4 +94,4 @@ button:disabled {
     width: 80vw;
     min-width: initial;
   }
-}
+} */

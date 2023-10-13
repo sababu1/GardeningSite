@@ -25,7 +25,7 @@ const Fruits = () => {
         <Card.Text>
           ID: 351
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
 <Card style={{ width: '18rem' }}>
@@ -38,7 +38,7 @@ const Fruits = () => {
         <Card.Text>
           ID: 534
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
 <Card style={{ width: '18rem' }}>
@@ -51,7 +51,7 @@ const Fruits = () => {
         <Card.Text>
           ID: 183
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
 <Card style={{ width: '18rem' }}>
@@ -64,7 +64,7 @@ const Fruits = () => {
         <Card.Text>
           ID: 175
         </Card.Text>
-        <Button variant="primary">Save to Favorites</Button>
+        
       </Card.Body>
     </Card>
    
@@ -72,7 +72,7 @@ const Fruits = () => {
 
 
 
-    <button onClick={toggleVegetables}>Show Vegetables</button>
+    <Button onClick={toggleVegetables} variant="success"> Toggle Vegetables</Button>
       {showVegetables && <Vegetables />}
 
 

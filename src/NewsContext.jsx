@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Button from 'react-bootstrap/Button';
 function NewsContext() {
   const [newsData, setNewsData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0); // Index of the currently displayed article
-  const apiKey = '1f03aff0ade84d56aff9e17c77b3f878'; // Replace with your News API key
+  const apiKey = '1f03aff0ade84d56aff9e17c77b3f878'; 
 
   useEffect(() => {
     // Fetch news data when the component mounts
@@ -30,7 +30,7 @@ function NewsContext() {
     <div className="news-container">
       <h2>Latest News</h2>
       <ul className="news-list">
-        {newsData.length > 0 && currentIndex < newsData.length ? (
+        {newsData.length > 0 && currentIndex < newsData.length ? (      //CHecks if there are news articles next. conditional operator
           <li className="news-item">
             <h3>
               <a href={newsData[currentIndex].url} target="_blank" rel="noopener noreferrer">
@@ -42,13 +42,13 @@ function NewsContext() {
             )}
             <p>{newsData[currentIndex].description}</p>
           </li>
-        ) : (
-          <p>No more articles to display.</p>
+        ) : (  //ternary operator
+          <p>No more articles to display.</p>  //renders if false (no more articles)
         )}
       </ul>
-      <button onClick={handleNextClick} className="next-button">
+      <Button className='nextButton' onClick={handleNextClick} variant='success'>
         Next
-      </button>
+      </Button>
     </div>
   );
 }
