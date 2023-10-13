@@ -50,7 +50,7 @@ const Page1 = ({ weatherData }) => {
       ) {
         alert('Stay Inside'); 
       } else {
-        alert('Stay Inside'); 
+        alert('error in fetching code'); 
       }
     } else {
       alert('Stay inside.'); 
