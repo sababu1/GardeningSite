@@ -1,3 +1,5 @@
+//Not used in the code: Here in case of wanting to put bigger focus on it...
+
 import React, { useState, useContext, useEffect } from 'react';
 import { WeatherContext } from './App';
 import './App.css';
