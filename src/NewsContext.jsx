@@ -11,7 +11,7 @@ function NewsContext() {
     // Fetch news data when the component mounts
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=gardening&apiKey=${apiKey}&pageSize=5`
+        `https://newsapi.org/v2/everything?q=gardening&apiKey=${apiKey}&pageSize=5`  //max articles is 5 to not max out the API
       )
       .then((response) => {
         setNewsData(response.data.articles);

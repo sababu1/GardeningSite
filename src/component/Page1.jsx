@@ -32,12 +32,12 @@ const Page1 = ({ weatherData }) => {
   };
 
   const handleResultsClick = () => {
-    if (plantData && weatherData) {
-      const sunlight = plantData.sunlight.toLowerCase();
+    if (plantData && weatherData) { //weatherdata pulled as a prop from the API on App.jsx
+      const sunlight = plantData.sunlight.toLowerCase(); //set to lowercase so the code is read correctly
       const weatherText = weatherData.text.toLowerCase();
 
       if (
-        (sunlight === 'full sun' && weatherText === 'Sunny') ||
+        (sunlight === 'full sun' && weatherText === 'sunny') ||
         ((sunlight === 'part shade' || sunlight === 'filtered shade') &&
           (weatherText === 'partly cloudy' || weatherText === 'cloudy'))
       ) {
@@ -53,7 +53,7 @@ const Page1 = ({ weatherData }) => {
         alert('error in fetching code'); 
       }
     } else {
-      alert('Stay inside.'); 
+      alert('Stay Inside.');   //for empty arrays if sunlight isnt on the API
     }
   };
 
@@ -77,7 +77,7 @@ const Page1 = ({ weatherData }) => {
               </div>
             )}
           </Card.Text>
-          <Button variant="success" onClick={handleResultsClick}>
+          <Button variant="success" onClick={handleResultsClick}  disabled={!plantId}>
             Should I plant now?
           </Button>
         </Card.Body>
@@ -91,7 +91,7 @@ const Page1 = ({ weatherData }) => {
           onChange={(e) => setPlantId(e.target.value)}
         />
 
-        <Button onClick={handleButtonClick} variant='success'>
+        <Button onClick={handleButtonClick} variant='success'  >
           Fetch Plant Data
         </Button>
       </div>
